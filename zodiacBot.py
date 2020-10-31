@@ -11,7 +11,7 @@ def sendText(message):
         keyboard.add(keyTaurus)
         bot.send_message(message.from_user.id, text = 'Выбери свой знак зодиака', reply_markup = keyboard)
     elif message.text == "/help":
-        bot.send_message(message.from_user.id, "Напиши: привет с маленькой буквы еленочка")
+        bot.send_message(message.from_user.id, "Напиши: привет")
     else:
         bot.send_message(message.from_user.id, "Я тебя не понимаю. Напиши: /help")
 @bot.callback_query_handler(func=lambda call: True)

@@ -1,11 +1,11 @@
 import telebot; bot = telebot.TeleBot('1184822377:AAFI7WcS2XEEj00lKOUXbC-tDHIuEY4Roz8')
 from telebot import types
 
-from zodiacSignInfo import allInfoSigns, dictToString
+from zodiacSignsInfo import allInfoSigns, dictToString
 
 @bot.message_handler(content_types=['text'])
 def textButtons(message):
-    if message.text.lower() == "привет":
+    if message.text.lower() == "Привет":
         bot.send_message(message.from_user.id, "Привет, я сейчас расскажу тебе про твой знак зодиака.")
         keyboard = types.InlineKeyboardMarkup()
         keyRam = types.InlineKeyboardButton(text = 'Овен', callback_data = 'ram')

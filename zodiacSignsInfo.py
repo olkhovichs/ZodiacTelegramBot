@@ -1,6 +1,6 @@
 def allInfoSigns():
     infoSigns = {}
-    with open("/Users/semenolhovic/Python_Projects/telegram/signsInfo.txt") as file:
+    with open("../signsInfo.txt") as file:
         for line in file:
             key, *value = line.split()
             infoSigns[key] = value

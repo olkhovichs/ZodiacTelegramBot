@@ -1,4 +1,4 @@
-def allInfoSigns():
+def info_sign():
     infoSigns = {}
     with open("../signsInfo.txt") as file:
         for line in file:
@@ -6,7 +6,7 @@ def allInfoSigns():
             infoSigns[key] = value
     return infoSigns
 
-def dictToString(singZodiac):
+def dict_to_string(singZodiac):
     descrSign = ''
     descrSign = str(' '.join(allInfoSigns()[singZodiac]))
     return descrSign

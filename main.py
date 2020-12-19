@@ -1,7 +1,8 @@
 import telebot; bot = telebot.TeleBot('1184822377:AAFI7WcS2XEEj00lKOUXbC-tDHIuEY4Roz8')
 from telebot import types
 
-from zodiacSignsInfo import allInfoSigns, dictToString
+from zodiacSignsInfo import info_sign as sign
+from zodiacSignsInfo import dict_to_string as ds
 
 @bot.message_handler(content_types=['text'])
 def textButtons(message):
@@ -41,27 +42,27 @@ def textButtons(message):
 @bot.callback_query_handler(func=lambda call: True)
 def eventButtons(call):
     if call.data == 'ram':
-        bot.send_message(call.message.chat.id, dictToString('Овен'))
+        bot.send_message(call.message.chat.id, ds('Овен'))
     if call.data == 'bull':
-        bot.send_message(call.message.chat.id, dictToString('Телец'))
+        bot.send_message(call.message.chat.id, ds('Телец'))
     if call.data == 'twins':
-        bot.send_message(call.message.chat.id, dictToString('Близнецы'))
+        bot.send_message(call.message.chat.id, ds('Близнецы'))
     if call.data == 'crab':
-        bot.send_message(call.message.chat.id, dictToString('Рак'))
+        bot.send_message(call.message.chat.id, ds('Рак'))
     if call.data == 'lion':
-        bot.send_message(call.message.chat.id, dictToString('Лев'))
+        bot.send_message(call.message.chat.id, ds('Лев'))
     if call.data == 'maider':
-        bot.send_message(call.message.chat.id, dictToString('Дева'))
+        bot.send_message(call.message.chat.id, ds('Дева'))
     if call.data == 'scales':
-        bot.send_message(call.message.chat.id, dictToString('Весы'))
+        bot.send_message(call.message.chat.id, ds('Весы'))
     if call.data == 'scorpion':
-        bot.send_message(call.message.chat.id, dictToString('Скорпион'))
+        bot.send_message(call.message.chat.id, ds('Скорпион'))
     if call.data == 'archer':
-        bot.send_message(call.message.chat.id, dictToString('Стрелец'))
+        bot.send_message(call.message.chat.id, ds('Стрелец'))
     if call.data == 'goat':
-        bot.send_message(call.message.chat.id, dictToString('Козерог'))
+        bot.send_message(call.message.chat.id, ds('Козерог'))
     if call.data == 'waterbearer':
-        bot.send_message(call.message.chat.id, dictToString('Водолей'))
+        bot.send_message(call.message.chat.id, ds('Водолей'))
     if call.data == 'fishes':
-        bot.send_message(call.message.chat.id, dictToString('Рыбы'))
+        bot.send_message(call.message.chat.id, ds('Рыбы'))
 bot.polling(none_stop=True, interval=0)

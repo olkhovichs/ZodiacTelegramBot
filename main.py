@@ -5,7 +5,7 @@ from zodiacSignsInfo import info_sign as sign
 from zodiacSignsInfo import dict_to_string as ds
 
 @bot.message_handler(content_types=['text'])
-def textButtons(message):
+def text_buttons(message):
     if message.text.lower() == "Привет":
         bot.send_message(message.from_user.id, "Привет, я сейчас расскажу тебе про твой знак зодиака.")
         keyboard = types.InlineKeyboardMarkup()
@@ -40,7 +40,7 @@ def textButtons(message):
         bot.send_message(message.from_user.id, "Я тебя не понимаю. Напиши: /help")
 
 @bot.callback_query_handler(func=lambda call: True)
-def eventButtons(call):
+def event_buttons(call):
     if call.data == 'ram':
         bot.send_message(call.message.chat.id, ds('Овен'))
     if call.data == 'bull':

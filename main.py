@@ -1,4 +1,4 @@
-import telebot; bot = telebot.TeleBot('1184822377:AAFI7WcS2XEEj00lKOUXbC-tDHIuEY4Roz8')
+import telebot; bot = telebot.TeleBot('TOKEN')
 from telebot import types
 
 from zodiacSignsInfo import info_sign as sign
